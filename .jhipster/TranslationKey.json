@@ -1,0 +1,33 @@
+{
+  "name": "TranslationKey",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fallbackValue",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "translationKey",
+      "relationshipName": "refProject",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210103094141",
+  "entityTableName": "translation_key",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

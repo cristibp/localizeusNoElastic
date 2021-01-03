@@ -1,0 +1,42 @@
+{
+  "name": "Transaction",
+  "fields": [
+    {
+      "fieldName": "amountInCents",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "TransactionType",
+      "fieldValues": "IN,OUT"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "serviceSubscription",
+      "otherEntityRelationshipName": "transaction",
+      "relationshipName": "refServiceSubscription",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210103095141",
+  "entityTableName": "transaction",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

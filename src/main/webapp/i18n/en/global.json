@@ -7,6 +7,21 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "project": "Project",
+        "translationKey": "Translation Key",
+        "translation": "Translation",
+        "language": "Language",
+        "comment": "Comment",
+        "discussion": "Discussion",
+        "projectHistory": "Project History",
+        "apiKey": "Api Key",
+        "keyLabel": "Key Label",
+        "userPermission": "User Permission",
+        "company": "Company",
+        "transaction": "Transaction",
+        "plan": "Plan",
+        "serviceSubscription": "Service Subscription",
+        "userProjectPermission": "User Project Permission",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

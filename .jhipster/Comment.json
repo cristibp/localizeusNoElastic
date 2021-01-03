@@ -1,0 +1,29 @@
+{
+  "name": "Comment",
+  "fields": [
+    {
+      "fieldName": "value",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "translationKey",
+      "otherEntityRelationshipName": "comment",
+      "relationshipName": "refTranslationKey",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210103094441",
+  "entityTableName": "comment",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

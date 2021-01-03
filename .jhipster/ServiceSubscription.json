@@ -1,0 +1,45 @@
+{
+  "name": "ServiceSubscription",
+  "fields": [
+    {
+      "fieldName": "start",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "end",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "paymentType",
+      "fieldType": "Periodicity",
+      "fieldValues": "MONTHLY,SEMIANNUAL,YEARLY,BIANNUALLY"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "company",
+      "otherEntityRelationshipName": "serviceSubscription",
+      "relationshipName": "refCompany",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "plan",
+      "otherEntityRelationshipName": "serviceSubscription",
+      "relationshipName": "refPlan",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210103095341",
+  "entityTableName": "service_subscription",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

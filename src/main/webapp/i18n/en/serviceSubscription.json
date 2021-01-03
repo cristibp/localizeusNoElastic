@@ -1,0 +1,26 @@
+{
+  "localizeusNoElasticApp": {
+    "serviceSubscription": {
+      "home": {
+        "title": "Service Subscriptions",
+        "createLabel": "Create a new Service Subscription",
+        "createOrEditLabel": "Create or edit a Service Subscription",
+        "notFound": "No Service Subscriptions found"
+      },
+      "created": "A new Service Subscription is created with identifier {{ param }}",
+      "updated": "A Service Subscription is updated with identifier {{ param }}",
+      "deleted": "A Service Subscription is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Service Subscription {{ id }}?"
+      },
+      "detail": {
+        "title": "Service Subscription"
+      },
+      "start": "Start",
+      "end": "End",
+      "paymentType": "Payment Type",
+      "refCompany": "Ref Company",
+      "refPlan": "Ref Plan"
+    }
+  }
+}

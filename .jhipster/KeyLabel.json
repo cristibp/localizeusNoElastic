@@ -1,0 +1,29 @@
+{
+  "name": "KeyLabel",
+  "fields": [
+    {
+      "fieldName": "value",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "translationKey",
+      "otherEntityRelationshipName": "keyLabel",
+      "relationshipName": "refTranslationKey",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210103094841",
+  "entityTableName": "key_label",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

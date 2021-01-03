@@ -1,0 +1,10 @@
+{
+  "localizeusNoElasticApp": {
+    "ProjectActions": {
+      "null": "",
+      "ADD": "ADD",
+      "DELETE": "DELETE",
+      "UPDATE": "UPDATE"
+    }
+  }
+}

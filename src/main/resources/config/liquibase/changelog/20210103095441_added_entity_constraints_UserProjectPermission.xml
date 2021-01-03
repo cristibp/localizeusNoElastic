@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity UserProjectPermission.
+    -->
+    <changeSet id="20210103095441-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="ref_user_id"
+                                 baseTableName="user_project_permission"
+                                 constraintName="fk_user_project_permission_ref_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="ref_project_id"
+                                 baseTableName="user_project_permission"
+                                 constraintName="fk_user_project_permission_ref_project_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="project"/>
+
+        <addForeignKeyConstraint baseColumnNames="ref_user_permission_id"
+                                 baseTableName="user_project_permission"
+                                 constraintName="fk_user_project_permission_ref_user_permission_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_permission"/>
+
+    </changeSet>
+</databaseChangeLog>

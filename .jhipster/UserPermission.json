@@ -1,0 +1,37 @@
+{
+  "name": "UserPermission",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "PermissionType",
+      "fieldValues": "READ,CREATE,UPDATE,DELETE"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "userPermission",
+      "relationshipName": "refUser",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "userPermission",
+      "relationshipName": "refProject",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210103094941",
+  "entityTableName": "user_permission",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

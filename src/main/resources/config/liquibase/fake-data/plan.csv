@@ -1,0 +1,11 @@
+id;name;cost_in_cents;key_limit;calls_limit;type
+1;California infrastructure deploy;6625;87718;23673;SEMIANNUAL
+2;Face to face;44958;70087;34279;YEARLY
+3;Direct;70614;16695;92144;BIANNUALLY
+4;PNG;90219;47358;24367;YEARLY
+5;monitor mindshare compress;55943;44099;29335;BIANNUALLY
+6;lavender Missouri Divide;48246;81289;82854;SEMIANNUAL
+7;indigo Beauty;27591;41298;43486;MONTHLY
+8;Future;34932;2712;2239;YEARLY
+9;override Officer Plaza;25363;17810;19386;YEARLY
+10;Fresh Consultant;63672;66146;23851;MONTHLY

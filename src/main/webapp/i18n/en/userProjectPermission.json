@@ -1,0 +1,24 @@
+{
+  "localizeusNoElasticApp": {
+    "userProjectPermission": {
+      "home": {
+        "title": "User Project Permissions",
+        "createLabel": "Create a new User Project Permission",
+        "createOrEditLabel": "Create or edit a User Project Permission",
+        "notFound": "No User Project Permissions found"
+      },
+      "created": "A new User Project Permission is created with identifier {{ param }}",
+      "updated": "A User Project Permission is updated with identifier {{ param }}",
+      "deleted": "A User Project Permission is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete User Project Permission {{ id }}?"
+      },
+      "detail": {
+        "title": "User Project Permission"
+      },
+      "refUser": "Ref User",
+      "refProject": "Ref Project",
+      "refUserPermission": "Ref User Permission"
+    }
+  }
+}

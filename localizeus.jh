@@ -1,0 +1,174 @@
+entity Project {
+	name String
+}
+
+entity  TranslationKey{
+	name String,
+    fallbackValue String
+}
+
+entity Translation{
+	value String,
+}
+
+entity Language {
+	languageName String
+}
+
+entity Comment {
+	value String
+}
+
+entity Discussion {
+	value String
+}
+
+entity ProjectHistory {
+    action ProjectActions,
+	oldValue String,
+    newValue String
+}
+
+entity ApiKey {
+    value String,
+    startDate LocalDate,
+    endDate LocalDate
+}
+
+entity KeyLabel {
+	value String
+}
+
+entity UserPermission {
+	type PermissionType
+}
+
+entity Company {
+	name String,
+    email String,
+    phone String
+}
+
+entity Transaction {
+	amountInCents Long,
+    date LocalDate,
+    status String,
+    type TransactionType
+}
+
+entity Plan {
+    name String,
+    costInCents Long,
+    keyLimit Long,
+    callsLimit Long,
+    type Periodicity
+}
+
+entity ServiceSubscription {
+    start LocalDate,
+    end LocalDate,
+    paymentType Periodicity
+}
+
+entity UserProjectPermission {
+}
+
+enum Periodicity {
+    MONTHLY,
+    SEMIANNUAL,
+    YEARLY,
+    BIANNUALLY
+}
+
+enum TransactionType {
+   IN,
+   OUT
+}
+
+enum PermissionType {
+    READ,
+    CREATE,
+    UPDATE,
+    DELETE
+}
+enum ProjectActions {	
+	ADD,
+	DELETE,
+    UPDATE
+}
+
+relationship ManyToOne {
+	ServiceSubscription{refCompany} to Company
+}
+
+relationship ManyToOne {
+	Transaction{refServiceSubscription} to ServiceSubscription
+}
+
+relationship ManyToOne {
+	ServiceSubscription{refPlan} to Plan
+}
+
+relationship ManyToOne {
+	ApiKey{refUser} to User
+}
+
+relationship ManyToOne {
+	ProjectHistory{refUser} to User
+}
+
+relationship ManyToOne {
+	ProjectHistory{refTranslationKey} to TranslationKey
+}
+
+relationship ManyToOne {
+	ProjectHistory{refTranslation} to Translation
+}
+
+relationship ManyToOne {
+  	Translation{refTranslationKey} to TranslationKey
+}
+    
+relationship ManyToOne {
+  	Translation{refLanguage} to Language
+}
+
+relationship ManyToOne {
+  	Comment{refTranslationKey} to TranslationKey
+}
+
+relationship ManyToOne {
+  	Discussion{refProject} to Project
+}
+
+relationship ManyToOne {
+  	TranslationKey{refProject} to Project
+}
+
+relationship ManyToOne {
+	KeyLabel{refTranslationKey} to TranslationKey
+}
+
+relationship ManyToOne{
+	UserPermission{refUser} to User
+}
+
+relationship ManyToOne{
+	UserPermission{refProject} to Project
+}
+
+relationship ManyToOne {
+	UserProjectPermission{refUser} to User
+    UserProjectPermission{refProject} to Project
+    UserProjectPermission{refUserPermission} to UserPermission
+}
+
+// Set pagination options
+paginate ProjectHistory, Discussion, Comment with infinite-scroll
+paginate Project, TranslationKey, Translation, KeyLabel, ApiKey, Language, Transaction, Company, ServiceSubscription, Plan with pagination
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl

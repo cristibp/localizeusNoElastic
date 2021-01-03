@@ -1,0 +1,38 @@
+{
+  "name": "UserProjectPermission",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "userProjectPermission",
+      "relationshipName": "refUser",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "userProjectPermission",
+      "relationshipName": "refProject",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "userPermission",
+      "otherEntityRelationshipName": "userProjectPermission",
+      "relationshipName": "refUserPermission",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210103095441",
+  "entityTableName": "user_project_permission",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

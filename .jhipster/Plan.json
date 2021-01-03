@@ -1,0 +1,38 @@
+{
+  "name": "Plan",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "costInCents",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "keyLimit",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "callsLimit",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "Periodicity",
+      "fieldValues": "MONTHLY,SEMIANNUAL,YEARLY,BIANNUALLY"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210103095241",
+  "entityTableName": "plan",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

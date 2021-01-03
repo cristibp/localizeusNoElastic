@@ -1,0 +1,23 @@
+{
+  "localizeusNoElasticApp": {
+    "keyLabel": {
+      "home": {
+        "title": "Key Labels",
+        "createLabel": "Create a new Key Label",
+        "createOrEditLabel": "Create or edit a Key Label",
+        "notFound": "No Key Labels found"
+      },
+      "created": "A new Key Label is created with identifier {{ param }}",
+      "updated": "A Key Label is updated with identifier {{ param }}",
+      "deleted": "A Key Label is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Key Label {{ id }}?"
+      },
+      "detail": {
+        "title": "Key Label"
+      },
+      "value": "Value",
+      "refTranslationKey": "Ref Translation Key"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "localizeusNoElasticApp": {
+    "Periodicity": {
+      "null": "",
+      "MONTHLY": "MONTHLY",
+      "SEMIANNUAL": "SEMIANNUAL",
+      "YEARLY": "YEARLY",
+      "BIANNUALLY": "BIANNUALLY"
+    }
+  }
+}
